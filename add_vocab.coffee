@@ -1,6 +1,6 @@
 Commands.create 'add vocab',
 	grammarType: 'textCapture'
-  description: 'Add a new vocabulary term to the voicecode settings vocabulary list, specifying as an alternate pronunciation any argument given.'
+  description: 'Add the selection to the voicecode settings vocabulary list as a new vocabulary term, specifying the argument as an alternate pronunciation if an argument is given.'
 	tags: ['user', 'recognition']
 	vocabulary: true
   action: (input) ->
@@ -10,13 +10,17 @@ Commands.create 'add vocab',
     alternatePronunciation = input.toString()
     if alternatePronunciation = 'NaN'
       @string 'Settings.extend "vocabulary",'
-      @key 'escape'
+      @key 'enter'
+			@key 'escape'
       @key 'right'
       @key 'enter'
+			@key 'tab'
       @string '\'' + newVocab + '\''
     else
       @string 'Settings.extend "vocabularyAlternate",'
+      @key 'enter'
       @key 'escape'
       @key 'right'
       @key 'enter'
+			@key 'tab'
       @string '\'' + newVocab + '\': \'' + alternatePronunciation + '\''
