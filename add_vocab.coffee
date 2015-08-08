@@ -8,7 +8,7 @@ Commands.create 'add vocab',
     @exec 'atom ~/voicecode/commando/config/user_settings.coffee'
     @key 'f', 'command'
     alternatePronunciation = input.toString()
-    if alternatePronunciation = 'NaN'
+    if alternatePronunciation == 'NaN'
       @string 'Settings.extend "vocabulary",'
       @key 'enter'
 			@key 'escape'
