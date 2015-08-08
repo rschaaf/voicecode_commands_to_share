@@ -8,7 +8,7 @@ Commands.createWithDefaults {triggerScopes: ["Atom"], tags: ["atom", "user"]},
     description: "outdent current line(s)"
     action: ->
       @key "[", "command"
-  "shackin":
+  "brackle":
     description: "select all text inside the current brackets"
     action: ->
       @key "m", ["command", "control"]
