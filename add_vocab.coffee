@@ -1,3 +1,6 @@
+#The command still doesn't work very well for adding alternate pronunciations, but it seems to work fine for just adding plain vocabulary.
+
+
 Commands.create 'add vocab',
   grammarType: 'textCapture'
   description: 'Add the selection to the voicecode settings vocabulary list as a new vocabulary term, specifying the argument as an alternate pronunciation if an argument is given.'
